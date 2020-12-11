@@ -1,0 +1,17 @@
+- host: frontYback
+  tasks:
+    - name: instalar node y npm
+      yum:
+        name:
+              - epel-release
+              - nodejs
+  
+    - name: descargar repo node
+    - shell: curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  
+    - name: instalar dependencias
+      yum:
+        name:
+              - gcc
+              - c++
+              - make
